@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Projects</title>
+  <style>
+    /* Background and layout */
+    body {
+      background: linear-gradient(to right, #941017, #f9f9f9);
+      font-family: Arial, sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Main container */
+    .container {
+      background: rgb(241, 241, 241);
+      width: 100%;
+      max-width: 800px;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+
+    .project {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    .toggle-btn {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .toggle-btn:hover {
+      background: #0056b3;
+    }
+
+    .project-detail {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .project-detail img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    a.back {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Projects</h1>
+
+    <div class="project">
+      <h2>COFFEE SHOP</h2>
+      <p>Perhaps a ordering system consist of allows the costumer to choose any items on the menu with prices and can calculate the total number of orders and give respectable discounts to pwds</p>.</p>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Click to Show/Hide Project</button>
+      <div class="project-detail">
+          <img src="images/project1.jpeg" alt="Project 1 Screenshot">
+        <p>More detailed info about the project—your challenge, approach, technologies used, etc.</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>PURCHASE CALCULATOR</h2>
+      <p>Basically ask the user the total purchase amount in (peso) and the program will asked the user for their birthday and calculates the discount applied and the amount to pay.</p>
+      <button class="toggle-btn" onclick="toggleDetail(this)">Click to Show/Hide Project</button>
+      <div class="project-detail">
+        <img src="images/project2.jpeg" alt="Project 2 Screenshot">
+        <p>More detailed info about this project—what it does, your role, key features.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back">← Back to Profile</a>
+  </div>
+
+  <script>
+    function toggleDetail(btn) {
+      const detail = btn.nextElementSibling;
+      const isVisible = detail.style.display === 'block';
+      detail.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Show Project' : 'Hide Project';
+    }
+  </script>
+
+</body>
+</html>
